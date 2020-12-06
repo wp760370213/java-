@@ -20,58 +20,61 @@ pc调用setCPU(CPU c)方法，调用时实参是cpu。
 pc调用setHardDisk (HardDisk h)方法， 调用时实参是disk。
 pc 调用show()方法。
 # 三、核心方法
-方法一PC：
- public class PC {
-	CPU cpu;
-	HardDisk HD;
-	public void setCPU(CPU c){
+- 方法一PC：
+
+      public class PC {
+		 CPU cpu;
+		HardDisk HD;
+		public void setCPU(CPU c){
 		cpu=c;
-	}
-	public void setHardDisk(HardDisk h){
+		}
+		public void setHardDisk(HardDisk h){
 		HD=h;
-	}
-	public void show(){
+		}
+		public void show(){
 		System.out.println("cpu的速度："+cpu.getSpeed()+
 				           "硬盘的容量："+HD.getAmount()+
 				           "cpu的品牌："+cpu.getBrand()+
 				           "硬盘的价格："+HD.getPrice());
-	}
-}
-方法二CPU：
-public class CPU {
-	int speed;
-	protected String brand;//CPU品牌
-	void setSpeed(int m){
+	         	  }
+             		 }
+- 方法二CPU：
+
+		public class CPU {
+	    	int speed;
+		protected String brand;//CPU品牌
+		void setSpeed(int m){
 		speed=m;
-	}
-	public int getSpeed(){
+		}
+		public int getSpeed(){
 		return speed;
-	}
-	public String getBrand() {
+		}
+		public String getBrand() {
 		return brand;
-	}
-	public void setBrand(String brand) {
+		}
+		public void setBrand(String brand) {
 		this.brand = brand;
-	}
-}
-方法三HardDisk：
-public class HardDisk {
-	private int amount;
-	int price;
-	void setAmount(int m){
+		}
+		}
+- 方法三HardDisk：
+
+		public class HardDisk {
+		private int amount;
+		int price;
+		void setAmount(int m){
 		amount=m;
-	}
-	int getAmount(){
+		}
+		int getAmount(){
 		return amount;
-	}
-	public int getPrice() {
+			}
+		public int getPrice() {
 		return price;
-	}
-	public void setPrice(int price) {
+		}
+		public void setPrice(int price) {
 		this.price = price;
-	}
-}
-四、实验结果
+		}
+		}
+# 四、实验结果
 cpu的速度：2200硬盘的容量：200
-五、实验感想
+# 五、实验感想
 通过这次实验学会使用Java编写简单的类，理解简单的类的使用方法，熟悉Java的构造方法，实现了定义属性的修饰符多样化。 
